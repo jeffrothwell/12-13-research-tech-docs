@@ -45,3 +45,40 @@ p my_str.split(" ", 8)  #split by spaces, max 8 elements in the return array
 my_str = "Little Jimmy's off to camp"
 p my_str.start_with?("Litt")   #returns true in this case
 p my_str.start_with?("sqirming") #returns false in this case
+
+# Array class:
+# 1. first:  can have no arguments in which case it returns the first
+#   object in the array, whatever data type it may be.  with an integer
+#   as an argument, returns an array with the first (integer) elements
+#   of the array it's called on.
+#
+#       example:
+
+my_array = ["David", "Bowie", "Mars", "Spiders"]
+p my_array.first   # => "David"
+p my_array.first(2)  # =>  ["David", "Bowie"]
+
+# 2. delete_at:  requires an integer as an argument, deletes the array
+#               element at that index number, returns the value stored
+#               at that index number.  The original array is modified to
+#               have that value removed, but note this is not actually the
+#               return value.  will also return nil if the argument integer
+# =>            is out of the range of the size of the array
+#
+#       example
+
+p my_array.delete_at(1)  # => "Bowie"
+p my_array                #array is now missing "Bowie", index numbers for
+                          #later elements would decrease by one
+
+# =>    OK, at this point, it's sunday night, I left this assignment to last
+# because I generally found through the week my ability to make sense
+# of the docs and also know what I'm looking for from both the docs
+# and stack overflow improved the more I used both sources.  Other than
+# some of the more out there examples and options in the docs, I feel
+# pretty good about reading them, seeing the examples and making sense of it
+# as well as the importance of what the return value is.
+#
+# I went through all the other methods in the assignment and made sure I
+# understood them, I'm just not writing it all out here.  Still need to
+# take a stab at the second roll the dice assignment!
